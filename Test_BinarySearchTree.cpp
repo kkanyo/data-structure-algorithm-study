@@ -66,10 +66,8 @@ static int TestBinarySearchTree( )
 
 static void TestRedBlackTree()
 {
-	RBTNode* tree = nullptr;
+	RedBlackTree* tree = new RedBlackTree();
 	RBTNode* node = nullptr;
-
-	Nil = RBT_CreateNode( 0 );
 
 	while ( 1 )
 	{
@@ -95,7 +93,7 @@ static void TestRedBlackTree()
 		}
 		else if ( cmd == 4 )
 		{
-			RBT_PrintTree( tree, 0, 0 );
+			tree->Print();
 			printf( "\n" );
 			continue;
 		}
@@ -118,22 +116,13 @@ static void TestRedBlackTree()
 		switch ( cmd )
 		{
 		case 1:
-			RBT_InsertNode( &tree, RBT_CreateNode( param ) );
+			tree->InsertNode( param );
 			break;
 		case 2:
-			node = RBT_RemoveNode( &tree, param );
-
-			if ( node == nullptr )
-			{
-				printf( "Not found node to delete:%d\n", param );
-			}
-			else
-			{
-				RBT_DestroyNode( node );
-			}
+			tree->RemoveNode( param );
 			break;
 		case 3:
-			node = RBT_SearchNode( tree, param );
+			node = tree->SearchNode( param );
 
 			if ( node == nullptr )
 			{
@@ -142,14 +131,11 @@ static void TestRedBlackTree()
 			else
 			{
 				printf( "Found node: %d(Color:%s)\n",
-					node->Data, node->Color == RBTNode::RED ? "RED" : "BLACK" );
+					node->Data, node->Color == Color::RED ? "RED" : "BLACK" );
 			}
 			break;
 		}
 		printf( "\n" );
 
 	}
-
-	RBT_DestroyTree( tree );
-	RBT_DestroyNode( Nil );
 }

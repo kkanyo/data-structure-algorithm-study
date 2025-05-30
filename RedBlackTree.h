@@ -1,36 +1,52 @@
 #pragma once
 
 #include <cstdio>
-#include <cstdlib>
+#include <cstring>
 
 typedef int ElementType;
 
+enum class Color
+{
+	RED,
+	BLACK
+};
+
 struct RBTNode
 {
+	ElementType Data;
+
 	RBTNode* Parent;
 	RBTNode* Left;
 	RBTNode* Right;
 
-	enum { RED, BLACK} Color;
-	
-	ElementType Data;
+	Color Color;
 };
 
 extern RBTNode* Nil;
 
-void RBT_DestroyTree( RBTNode* root );
+class RedBlackTree
+{
+private:
+	RBTNode* root;
+	RBTNode* nil;	// Sentinel node for Red - Black Tree
 
-RBTNode* RBT_CreateNode( ElementType newData );
-void RBT_DestroyNode( RBTNode* node );
+	void rotateLeft( RBTNode* parent );
+	void rotateRight( RBTNode* parent );
+	void insertNodeHelper( RBTNode** root, RBTNode* newNode );
+	void rebuildAfterInsert( RBTNode* newNode );
+	void rebuildAfterRemove( RBTNode* successor );
 
-RBTNode* RBT_SearchNode( RBTNode* root, ElementType target );
-RBTNode* RBT_SearchMinNode( RBTNode* root );
-void RBT_InsertNode( RBTNode** root, RBTNode* newNode );
-void RBT_InsertNodeHelper( RBTNode** root, RBTNode* newNode );
-RBTNode* RBT_RemoveNode( RBTNode** root, ElementType target );
-void RBT_RebuildAfterInsert( RBTNode** root, RBTNode* newNode );
-void RBT_RebuildAfterRemove( RBTNode** root, RBTNode* successor );
+	void destroyNode( RBTNode* node );
+	void destroyTree( RBTNode* root );
+public:
+	RedBlackTree();
+	~RedBlackTree();
+	RBTNode* SearchNode( ElementType target, RBTNode* root = nullptr );
+	RBTNode* SearchMinNode( RBTNode* root );
+	 
+	void InsertNode( ElementType value );
+	void RemoveNode( ElementType target );
 
-void RBT_PrintTree( RBTNode* node, int depth, int blackCount );
-void RBT_RotateLeft( RBTNode** root, RBTNode* parent );
-void RBT_RotateRight( RBTNode** root, RBTNode* parent );
+	void Print( RBTNode* node = nullptr, int depth = 0, int blackCount = 0 );
+};
+
