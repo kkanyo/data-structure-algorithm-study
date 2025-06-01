@@ -176,11 +176,11 @@ void RedBlackTree::Print( RBTNode* node, int depth, int blackCount )
 
 	if ( node->Left == nil && node->Right == nil )
 	{
-		sprintf( buffer, "---------- %d", blackCount );
+		sprintf_s( buffer, "---------- %d", blackCount );
 	}
 	else
 	{
-		strncpy( buffer, "", sizeof( buffer ) );
+		strncpy_s( buffer, "", sizeof( buffer ) );
 	}
 
 	for ( int i = 0; i < depth; i++ )

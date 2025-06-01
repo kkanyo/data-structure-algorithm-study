@@ -84,7 +84,7 @@ static void TestRedBlackTree()
 		printf( "command number: " );
 
 		fgets( buffer, sizeof( buffer ) - 1, stdin );
-		int result = sscanf( buffer, "%d", &cmd );
+		int result = scanf_s( buffer, "%d", &cmd );
 
 		if ( cmd < 1 || cmd > 5 )
 		{
@@ -105,7 +105,7 @@ static void TestRedBlackTree()
 		printf( "Enter parameter (1~200) :\n" );
 
 		fgets( buffer, sizeof( buffer ) - 1, stdin );
-		result = sscanf( buffer, "%d", &param );
+		result = scanf_s( buffer, "%d", &param );
 	
 		if ( param < 1 || param > 200 )
 		{
