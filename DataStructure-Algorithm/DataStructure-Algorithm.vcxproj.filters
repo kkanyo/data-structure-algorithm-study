@@ -13,114 +13,147 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\list">
+    <Filter Include="소스 파일\data_structure">
+      <UniqueIdentifier>{8a6e721d-f161-4e77-a3ff-4c774c43ce85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data_structure\heap">
+      <UniqueIdentifier>{a09b8af7-78ac-4526-8140-434492ab83b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data_structure\list">
       <UniqueIdentifier>{115289e5-cc7a-4174-8e0f-ca6d10e783ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data_structure\queue">
+      <UniqueIdentifier>{c10a8751-e96f-4829-ae80-7a5f5f2ef6c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data_structure\stack">
+      <UniqueIdentifier>{f1e4c642-96a0-4438-8bf4-b21e7ba933d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data_structure\tree">
+      <UniqueIdentifier>{54aecb56-f876-44df-a5eb-3cb640eef176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithm">
+      <UniqueIdentifier>{7613bce1-c670-4637-861a-034b6e133869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithm\search">
+      <UniqueIdentifier>{9fefe1c2-eb9c-4575-ad7e-b7ca0e1c217c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\test">
+      <UniqueIdentifier>{7ac5ad52-ba5e-4f94-b6c5-590af7a25306}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="ArrayStack.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BinarySearch.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BinarySearchTree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\stack</Filter>
     </ClCompile>
     <ClCompile Include="CircularDoublyLinkedList.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\list</Filter>
     </ClCompile>
     <ClCompile Include="CircularQueue.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\queue</Filter>
     </ClCompile>
     <ClCompile Include="DisjointSet.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\tree</Filter>
     </ClCompile>
     <ClCompile Include="DoublyLinkedList.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\list</Filter>
     </ClCompile>
     <ClCompile Include="ExpressionTree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\tree</Filter>
     </ClCompile>
-    <ClCompile Include="LCRSTree.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Heap.c">
+      <Filter>소스 파일\data_structure\heap</Filter>
     </ClCompile>
     <ClCompile Include="LinkedList.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\list</Filter>
     </ClCompile>
     <ClCompile Include="LinkedListStack.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\stack</Filter>
     </ClCompile>
     <ClCompile Include="LinkedQueue.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="RedBlackTree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\queue</Filter>
     </ClCompile>
     <ClCompile Include="SBTTree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="LCRSTree.cpp">
+      <Filter>소스 파일\data_structure\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearch.cpp">
+      <Filter>소스 파일\algorithm\search</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTree.cpp">
+      <Filter>소스 파일\algorithm\search</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackTree.cpp">
+      <Filter>소스 파일\algorithm\search</Filter>
     </ClCompile>
     <ClCompile Include="Test_BinarySearchTree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\algorithm\search</Filter>
+    </ClCompile>
+    <ClCompile Include="TestHeap.h">
+      <Filter>소스 파일\test</Filter>
     </ClCompile>
     <ClCompile Include="TestLinkedList.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\test</Filter>
     </ClCompile>
     <ClCompile Include="TestQueue.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\test</Filter>
     </ClCompile>
     <ClCompile Include="TestStack.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\test</Filter>
     </ClCompile>
     <ClCompile Include="TestTree.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="BinarySearchTree.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\stack</Filter>
     </ClInclude>
     <ClInclude Include="CircularDoublyLinkedList.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\list</Filter>
     </ClInclude>
     <ClInclude Include="CircularQueue.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\queue</Filter>
     </ClInclude>
     <ClInclude Include="DisjointSet.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\tree</Filter>
     </ClInclude>
     <ClInclude Include="DoublyLinkedList.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\list</Filter>
     </ClInclude>
     <ClInclude Include="ExpressionTree.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="LCRSTree.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedListStack.h">
-      <Filter>소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedQueue.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\tree</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
-      <Filter>소스 파일</Filter>
+      <Filter>리소스 파일</Filter>
     </ClInclude>
-    <ClInclude Include="RedBlackTree.h">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="Heap.h">
+      <Filter>소스 파일\data_structure\heap</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>소스 파일\data_structure\list</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListStack.h">
+      <Filter>소스 파일\data_structure\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedQueue.h">
+      <Filter>소스 파일\data_structure\queue</Filter>
     </ClInclude>
     <ClInclude Include="SBTTree.h">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\data_structure\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="LCRSTree.h">
+      <Filter>소스 파일\data_structure\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
+      <Filter>소스 파일\algorithm\search</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTree.h">
+      <Filter>소스 파일\algorithm\search</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

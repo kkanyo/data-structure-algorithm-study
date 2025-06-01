@@ -1,0 +1,51 @@
+diff a/DataStructure-Algorithm/DataStructure-Algorithm.vcxproj b/DataStructure-Algorithm/DataStructure-Algorithm.vcxproj	(rejected hunks)
+@@ -130,9 +126,45 @@
+       <GenerateDebugInformation>true</GenerateDebugInformation>
+     </Link>
+   </ItemDefinitionGroup>
+-
+-  <ItemGroup></ItemGroup>
++  <ItemGroup>
++    <ClCompile Include="ArrayStack.cpp" />
++    <ClCompile Include="BinarySearch.cpp" />
++    <ClCompile Include="BinarySearchTree.cpp" />
++    <ClCompile Include="CircularDoublyLinkedList.cpp" />
++    <ClCompile Include="CircularQueue.cpp" />
++    <ClCompile Include="DisjointSet.cpp" />
++    <ClCompile Include="DoublyLinkedList.cpp" />
++    <ClCompile Include="ExpressionTree.cpp" />
++    <ClCompile Include="LCRSTree.cpp" />
++    <ClCompile Include="LinkedList.cpp" />
++    <ClCompile Include="LinkedListStack.cpp" />
++    <ClCompile Include="LinkedQueue.cpp" />
++    <ClCompile Include="main.cpp" />
++    <ClCompile Include="RedBlackTree.cpp" />
++    <ClCompile Include="SBTTree.cpp" />
++    <ClCompile Include="TestLinkedList.cpp" />
++    <ClCompile Include="TestQueue.cpp" />
++    <ClCompile Include="TestStack.cpp" />
++    <ClCompile Include="TestTree.cpp" />
++    <ClCompile Include="Test_BinarySearchTree.cpp" />
++  </ItemGroup>
++  <ItemGroup>
++    <ClInclude Include="ArrayStack.h" />
++    <ClInclude Include="BinarySearchTree.h" />
++    <ClInclude Include="CircularDoublyLinkedList.h" />
++    <ClInclude Include="CircularQueue.h" />
++    <ClInclude Include="DisjointSet.h" />
++    <ClInclude Include="DoublyLinkedList.h" />
++    <ClInclude Include="ExpressionTree.h" />
++    <ClInclude Include="LCRSTree.h" />
++    <ClInclude Include="LinkedList.h" />
++    <ClInclude Include="LinkedListStack.h" />
++    <ClInclude Include="LinkedQueue.h" />
++    <ClInclude Include="Point.h" />
++    <ClInclude Include="RedBlackTree.h" />
++    <ClInclude Include="SBTTree.h" />
++  </ItemGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
++</Project>
+\ No newline at end of file
