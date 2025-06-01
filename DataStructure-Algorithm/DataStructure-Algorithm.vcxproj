@@ -139,9 +139,11 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListStack.cpp" />
     <ClCompile Include="LinkedQueue.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="Heap.c" />
     <ClCompile Include="RedBlackTree.cpp" />
     <ClCompile Include="SBTTree.cpp" />
+    <ClCompile Include="TestHeap.h" />
     <ClCompile Include="TestLinkedList.cpp" />
     <ClCompile Include="TestQueue.cpp" />
     <ClCompile Include="TestStack.cpp" />
@@ -161,6 +163,7 @@
     <ClInclude Include="LinkedListStack.h" />
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="RedBlackTree.h" />
     <ClInclude Include="SBTTree.h" />
   </ItemGroup>
