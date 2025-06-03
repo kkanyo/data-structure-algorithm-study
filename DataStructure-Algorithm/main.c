@@ -1,6 +1,8 @@
-﻿#include "TestHeap.h"
+﻿#include "Test.h"
 
 int main()
 {
-	return TestHeap();
+	TestPriorityQueue();
+
+	return 0;
 }
