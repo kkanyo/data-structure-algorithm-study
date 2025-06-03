@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestSimpleHashTable();
+	TestChainingHashTable();
 
 	return 0;
 }

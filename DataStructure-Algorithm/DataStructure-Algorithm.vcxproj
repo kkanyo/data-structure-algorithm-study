@@ -130,6 +130,7 @@
     <ClCompile Include="ArrayStack.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="Chaining.c" />
     <ClCompile Include="CircularDoublyLinkedList.cpp" />
     <ClCompile Include="CircularQueue.cpp" />
     <ClCompile Include="DisjointSet.cpp" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="Chaining.h" />
     <ClInclude Include="CircularDoublyLinkedList.h" />
     <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="DisjointSet.h" />

@@ -95,3 +95,43 @@ void TestSimpleHashTable()
 
 	SHT_DestroyHashTable( ht );
 }
+
+void TestChainingHashTable()
+{
+	ChainingHashTable* ht = CHT_CreateHashTable( 12289 );
+	
+	CHT_Set( ht, "MSFT", "Microsoft Corporation" );
+	CHT_Set( ht, "JAVA", "Sun Microsystems" );
+	CHT_Set( ht, "GOOG", "Google Inc." );
+	CHT_Set( ht, "AMZN", "Amazon.com Inc." );
+	CHT_Set( ht, "AAPL", "Apple Inc." );
+	CHT_Set( ht, "TSLA", "Tesla Inc." );
+	CHT_Set( ht, "META", "Meta Platforms Inc." );
+	CHT_Set( ht, "NFLX", "Netflix Inc." );
+	CHT_Set( ht, "NVDA", "NVIDIA Corporation" );
+	CHT_Set( ht, "INTC", "Intel Corporation" );
+	CHT_Set( ht, "AMD", "Advanced Micro Devices Inc." );
+	CHT_Set( ht, "IBM", "International Business Machines Corporation" );
+	CHT_Set( ht, "ORCL", "Oracle Corporation" );
+	CHT_Set( ht, "CSCO", "Cisco Systems Inc." );
+	CHT_Set( ht, "ADBE", "Adobe Inc." );
+
+	printf( "\n" );
+	printf( "Key:%s, Value:%s\n", "MSFT", CHT_Get( ht, "MSFT" ) );
+	printf( "Key:%s, Value:%s\n", "AMZN", CHT_Get( ht, "AMZN" ) );
+	printf( "Key:%s, Value:%s\n", "TSLA", CHT_Get( ht, "TSLA" ) );
+	printf( "Key:%s, Value:%s\n", "NFLX", CHT_Get( ht, "NFLX" ) );
+	printf( "Key:%s, Value:%s\n", "AAPL", CHT_Get( ht, "AAPL" ) );
+	printf( "Key:%s, Value:%s\n", "AMD", CHT_Get( ht, "AMD" ) );
+	printf( "Key:%s, Value:%s\n", "NVDA", CHT_Get( ht, "NVDA" ) );
+	printf( "Key:%s, Value:%s\n", "GOOG", CHT_Get( ht, "GOOG" ) );
+	printf( "Key:%s, Value:%s\n", "INTC", CHT_Get( ht, "INTC" ) );
+	printf( "Key:%s, Value:%s\n", "CSCO", CHT_Get( ht, "CSCO" ) );
+	printf( "Key:%s, Value:%s\n", "META", CHT_Get( ht, "META" ) );
+	printf( "Key:%s, Value:%s\n", "IBM", CHT_Get( ht, "IBM" ) );
+	printf( "Key:%s, Value:%s\n", "ORCL", CHT_Get( ht, "ORCL" ) );
+	printf( "Key:%s, Value:%s\n", "ADBE", CHT_Get( ht, "ADBE" ) );
+	printf( "Key:%s, Value:%s\n", "JAVA", CHT_Get( ht, "JAVA" ) );
+
+	CHT_DestroyHashTable( ht );
+}

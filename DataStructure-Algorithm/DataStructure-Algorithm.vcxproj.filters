@@ -120,6 +120,9 @@
     <ClCompile Include="SimpleHashTable.c">
       <Filter>소스 파일\data_structure\hash</Filter>
     </ClCompile>
+    <ClCompile Include="Chaining.c">
+      <Filter>소스 파일\data_structure\hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -171,6 +174,9 @@
       <Filter>소스 파일\data_structure\queue</Filter>
     </ClInclude>
     <ClInclude Include="SimpleHashTable.h">
+      <Filter>소스 파일\data_structure\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="Chaining.h">
       <Filter>소스 파일\data_structure\hash</Filter>
     </ClInclude>
   </ItemGroup>
