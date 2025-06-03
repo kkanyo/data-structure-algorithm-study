@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestPriorityQueue();
+	TestSimpleHashTable();
 
 	return 0;
 }

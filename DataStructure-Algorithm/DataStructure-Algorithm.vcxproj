@@ -144,6 +144,7 @@
     <ClCompile Include="PriorityQueue.c" />
     <ClCompile Include="RedBlackTree.cpp" />
     <ClCompile Include="SBTTree.cpp" />
+    <ClCompile Include="SimpleHashTable.c" />
     <ClCompile Include="Test.h" />
     <ClCompile Include="TestLinkedList.cpp" />
     <ClCompile Include="Test.c" />
@@ -169,6 +170,7 @@
     <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="RedBlackTree.h" />
     <ClInclude Include="SBTTree.h" />
+    <ClInclude Include="SimpleHashTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

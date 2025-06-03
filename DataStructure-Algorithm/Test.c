@@ -73,3 +73,25 @@ void TestPriorityQueue()
 
 	PQ_Destroy( pq );
 }
+
+void TestSimpleHashTable()
+{
+	SimpleHashTable* ht = SHT_Create( 193 );
+	if ( ht == NULL )
+	{
+		printf( "Hash table creation failed.\n" );
+		return;
+	}
+
+	SHT_Set( ht, 418, 32114 );
+	SHT_Set( ht, 9, 514 );
+	SHT_Set( ht, 27, 8917 );
+	SHT_Set( ht, 1031, 286 );
+
+	printf( "Value for key %d: %d\n", 418, SHT_Get( ht, 418 ) );
+	printf( "Value for key %d: %d\n", 9, SHT_Get( ht, 9 ) );
+	printf( "Value for key %d: %d\n", 27, SHT_Get( ht, 27 ) );
+	printf( "Value for key %d: %d\n", 1031, SHT_Get( ht, 1031 ) );
+
+	SHT_DestroyHashTable( ht );
+}

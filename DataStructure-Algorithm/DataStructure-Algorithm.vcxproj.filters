@@ -40,6 +40,9 @@
     <Filter Include="소스 파일\test">
       <UniqueIdentifier>{7ac5ad52-ba5e-4f94-b6c5-590af7a25306}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\data_structure\hash">
+      <UniqueIdentifier>{0cc222d9-c7ee-4e24-ba50-66869a07941e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -114,6 +117,9 @@
     <ClCompile Include="Test.c">
       <Filter>소스 파일\test</Filter>
     </ClCompile>
+    <ClCompile Include="SimpleHashTable.c">
+      <Filter>소스 파일\data_structure\hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -163,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="PriorityQueue.h">
       <Filter>소스 파일\data_structure\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleHashTable.h">
+      <Filter>소스 파일\data_structure\hash</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
