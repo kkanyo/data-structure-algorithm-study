@@ -43,6 +43,9 @@
     <Filter Include="소스 파일\data_structure\hash">
       <UniqueIdentifier>{0cc222d9-c7ee-4e24-ba50-66869a07941e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\common">
+      <UniqueIdentifier>{94890411-8855-4a5a-858a-facfbabce6d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -123,6 +126,9 @@
     <ClCompile Include="Chaining.c">
       <Filter>소스 파일\data_structure\hash</Filter>
     </ClCompile>
+    <ClCompile Include="OpenAddressing.c">
+      <Filter>소스 파일\data_structure\hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -142,9 +148,6 @@
     </ClInclude>
     <ClInclude Include="ExpressionTree.h">
       <Filter>소스 파일\data_structure\tree</Filter>
-    </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>리소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="Heap.h">
       <Filter>소스 파일\data_structure\heap</Filter>
@@ -178,6 +181,15 @@
     </ClInclude>
     <ClInclude Include="Chaining.h">
       <Filter>소스 파일\data_structure\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenAddressing.h">
+      <Filter>소스 파일\data_structure\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>소스 파일\common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

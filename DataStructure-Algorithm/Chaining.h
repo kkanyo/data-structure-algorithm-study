@@ -4,19 +4,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef char* CKeyType;
-typedef char* CValueType;
+#include "common.h"
 
-typedef struct Node {
-	CKeyType Key;
-	CValueType Value;
+typedef struct ChainingNode {
+	KeyType Key;
+	ValueType Value;
 
-	struct Node* Next;
+	struct ChainingNode* Next;
 } ChainingNode;
 
 typedef ChainingNode* List;
 
-typedef struct HashTable {
+typedef struct ChainingHashTable {
 	int TableSize;
 	List* Table;
 } ChainingHashTable;
@@ -24,10 +23,10 @@ typedef struct HashTable {
 ChainingHashTable* CHT_CreateHashTable( int tableSize );
 void CHT_DestroyHashTable( ChainingHashTable* ht );
 
-ChainingNode* CHT_CreateNode( CKeyType key, CValueType value );
+ChainingNode* CHT_CreateNode( KeyType key, ValueType value );
 void CHT_DestroyNode( ChainingNode* node );
 
-void CHT_Set( ChainingHashTable* ht, CKeyType key, CValueType value );
-CValueType CHT_Get( ChainingHashTable* ht, CKeyType key );
+void CHT_Set( ChainingHashTable* ht, KeyType key, ValueType value );
+ValueType CHT_Get( ChainingHashTable* ht, KeyType key );
 
-int CHT_Hash( CKeyType key, int keyLength, int tableSize );
+int CHT_Hash( KeyType key, size_t keyLength, int tableSize );

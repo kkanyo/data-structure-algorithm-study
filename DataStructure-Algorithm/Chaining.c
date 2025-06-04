@@ -32,7 +32,7 @@ void CHT_DestroyHashTable( ChainingHashTable* ht )
 	free( ht );
 }
 
-ChainingNode* CHT_CreateNode( CKeyType key, CValueType value )
+ChainingNode* CHT_CreateNode( KeyType key, ValueType value )
 {
 	ChainingNode* node = ( ChainingNode* ) malloc( sizeof( ChainingNode ) );
 	if ( node == NULL ) {
@@ -57,7 +57,7 @@ void CHT_DestroyNode( ChainingNode* node )
 	free( node );
 }
 
-void CHT_Set( ChainingHashTable* ht, CKeyType key, CValueType value )
+void CHT_Set( ChainingHashTable* ht, KeyType key, ValueType value )
 {
 	int address = CHT_Hash( key, strlen( key ), ht->TableSize );
 	ChainingNode* newNode = CHT_CreateNode( key, value );
@@ -75,11 +75,11 @@ void CHT_Set( ChainingHashTable* ht, CKeyType key, CValueType value )
 		newNode->Next = ht->Table[address];
 		ht->Table[address] = newNode;
 
-		printf( "Collision detected: Key(%s), Address(%d)\n", key, address );
+		printf( "Collision detected: Key(%s), Address(%d)\n", (char*)key, address );
 	}
 }
 
-CValueType CHT_Get( ChainingHashTable* ht, CKeyType key )
+ValueType CHT_Get( ChainingHashTable* ht, KeyType key )
 {
 	int address = CHT_Hash( key, strlen( key ), ht->TableSize );
 
@@ -98,13 +98,13 @@ CValueType CHT_Get( ChainingHashTable* ht, CKeyType key )
 	return list->Value;
 }
 
-int CHT_Hash( CKeyType key, int keyLength, int tableSize )
+int CHT_Hash( KeyType key, size_t keyLength, int tableSize )
 {
 	int hashValue = 0;
 	
 	for ( int i = 0; i < keyLength; i++ )
 	{
-		hashValue = (hashValue << 3) + key[i];
+		hashValue = ( hashValue << 3 ) + ( ( char* ) key )[i];
 	}
 
 	return hashValue % tableSize;

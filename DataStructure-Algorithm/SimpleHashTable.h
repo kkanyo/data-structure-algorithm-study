@@ -3,8 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef int KeyType;
-typedef int ValueType;
+#include "common.h"
 
 typedef struct SimpleHashNode
 {

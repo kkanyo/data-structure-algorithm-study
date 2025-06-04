@@ -57,7 +57,7 @@ ValueType SHT_Get( SimpleHashTable* ht, KeyType key )
 	if ( address < 0 || address >= ht->TableSize )
 	{
 		printf( "Hash address out of bounds: %d\n", address );
-		return -1; // 다른 에러 값을 반환할 수 있다.
+		return NULL;
 	}
 
 	return ht->Table[address].Value;
@@ -65,9 +65,5 @@ ValueType SHT_Get( SimpleHashTable* ht, KeyType key )
 
 int SHT_Hash( KeyType key, int tableSize )
 {
-	return key % tableSize;
+	return (long long)key % tableSize;
 }
-
-
-
-	

@@ -6,27 +6,27 @@ void TestHeap()
 	if ( heap == NULL )
 	{
 		printf( "Heap creation failed.\n" );
-		return -1;
+		return;
 	}
 
 	HeapNode delNode;
 
 	Heap_DeleteMin( heap, &delNode );
-	Heap_Insert( heap, 10 );
+	Heap_Insert( heap, ( void* ) 10 );
 	Heap_PrintNdoes( heap );
 
 	Heap_DeleteMin( heap, &delNode );
 	Heap_PrintNdoes( heap );
 
-	Heap_Insert( heap, 20 );
-	Heap_Insert( heap, 5 );
-	Heap_Insert( heap, 15 );
+	Heap_Insert( heap, ( void* ) 20 );
+	Heap_Insert( heap, ( void* ) 5 );
+	Heap_Insert( heap, ( void* ) 15 );
 	Heap_PrintNdoes( heap );
 
-	Heap_Insert( heap, 30 );
-	Heap_Insert( heap, 25 );
-	Heap_Insert( heap, 35 );
-	Heap_Insert( heap, 10 );
+	Heap_Insert( heap, ( void* ) 30 );
+	Heap_Insert( heap, ( void* ) 25 );
+	Heap_Insert( heap, ( void* ) 35 );
+	Heap_Insert( heap, ( void* ) 10 );
 	Heap_PrintNdoes( heap );
 
 	Heap_DeleteMin( heap, &delNode );
@@ -83,15 +83,15 @@ void TestSimpleHashTable()
 		return;
 	}
 
-	SHT_Set( ht, 418, 32114 );
-	SHT_Set( ht, 9, 514 );
-	SHT_Set( ht, 27, 8917 );
-	SHT_Set( ht, 1031, 286 );
+	SHT_Set( ht, ( void* ) 418, ( void* ) 32114 );
+	SHT_Set( ht, ( void* ) 9, ( void* ) 514 );
+	SHT_Set( ht, ( void* ) 27, ( void* ) 8917 );
+	SHT_Set( ht, ( void* ) 1031, ( void* ) 286 );
 
-	printf( "Value for key %d: %d\n", 418, SHT_Get( ht, 418 ) );
-	printf( "Value for key %d: %d\n", 9, SHT_Get( ht, 9 ) );
-	printf( "Value for key %d: %d\n", 27, SHT_Get( ht, 27 ) );
-	printf( "Value for key %d: %d\n", 1031, SHT_Get( ht, 1031 ) );
+	printf( "Value for key %d: %lld\n", 418, ( long long )SHT_Get( ht, ( void* ) 418 ) );
+	printf( "Value for key %d: %lld\n", 9, ( long long )SHT_Get( ht, ( void* ) 9 ) );
+	printf( "Value for key %d: %lld\n", 27, ( long long )SHT_Get( ht, ( void* ) 27 ) );
+	printf( "Value for key %d: %lld\n", 1031, ( long long )SHT_Get( ht, ( void* ) 1031 ) );
 
 	SHT_DestroyHashTable( ht );
 }
@@ -117,21 +117,21 @@ void TestChainingHashTable()
 	CHT_Set( ht, "ADBE", "Adobe Inc." );
 
 	printf( "\n" );
-	printf( "Key:%s, Value:%s\n", "MSFT", CHT_Get( ht, "MSFT" ) );
-	printf( "Key:%s, Value:%s\n", "AMZN", CHT_Get( ht, "AMZN" ) );
-	printf( "Key:%s, Value:%s\n", "TSLA", CHT_Get( ht, "TSLA" ) );
-	printf( "Key:%s, Value:%s\n", "NFLX", CHT_Get( ht, "NFLX" ) );
-	printf( "Key:%s, Value:%s\n", "AAPL", CHT_Get( ht, "AAPL" ) );
-	printf( "Key:%s, Value:%s\n", "AMD", CHT_Get( ht, "AMD" ) );
-	printf( "Key:%s, Value:%s\n", "NVDA", CHT_Get( ht, "NVDA" ) );
-	printf( "Key:%s, Value:%s\n", "GOOG", CHT_Get( ht, "GOOG" ) );
-	printf( "Key:%s, Value:%s\n", "INTC", CHT_Get( ht, "INTC" ) );
-	printf( "Key:%s, Value:%s\n", "CSCO", CHT_Get( ht, "CSCO" ) );
-	printf( "Key:%s, Value:%s\n", "META", CHT_Get( ht, "META" ) );
-	printf( "Key:%s, Value:%s\n", "IBM", CHT_Get( ht, "IBM" ) );
-	printf( "Key:%s, Value:%s\n", "ORCL", CHT_Get( ht, "ORCL" ) );
-	printf( "Key:%s, Value:%s\n", "ADBE", CHT_Get( ht, "ADBE" ) );
-	printf( "Key:%s, Value:%s\n", "JAVA", CHT_Get( ht, "JAVA" ) );
+	printf( "Key:%s, Value:%s\n", "MSFT", ( char* )CHT_Get( ht, "MSFT" ) );
+	printf( "Key:%s, Value:%s\n", "AMZN", ( char* )CHT_Get( ht, "AMZN" ) );
+	printf( "Key:%s, Value:%s\n", "TSLA", ( char* )CHT_Get( ht, "TSLA" ) );
+	printf( "Key:%s, Value:%s\n", "NFLX", ( char* )CHT_Get( ht, "NFLX" ) );
+	printf( "Key:%s, Value:%s\n", "AAPL", ( char* )CHT_Get( ht, "AAPL" ) );
+	printf( "Key:%s, Value:%s\n", "AMD", ( char* )CHT_Get( ht, "AMD" ) );
+	printf( "Key:%s, Value:%s\n", "NVDA", ( char* )CHT_Get( ht, "NVDA" ) );
+	printf( "Key:%s, Value:%s\n", "GOOG", ( char* )CHT_Get( ht, "GOOG" ) );
+	printf( "Key:%s, Value:%s\n", "INTC", ( char* )CHT_Get( ht, "INTC" ) );
+	printf( "Key:%s, Value:%s\n", "CSCO", ( char* )CHT_Get( ht, "CSCO" ) );
+	printf( "Key:%s, Value:%s\n", "META", ( char* )CHT_Get( ht, "META" ) );
+	printf( "Key:%s, Value:%s\n", "IBM", ( char* )CHT_Get( ht, "IBM" ) );
+	printf( "Key:%s, Value:%s\n", "ORCL", ( char* )CHT_Get( ht, "ORCL" ) );
+	printf( "Key:%s, Value:%s\n", "ADBE", ( char* )CHT_Get( ht, "ADBE" ) );
+	printf( "Key:%s, Value:%s\n", "JAVA", ( char* )CHT_Get( ht, "JAVA" ) );
 
 	CHT_DestroyHashTable( ht );
 }

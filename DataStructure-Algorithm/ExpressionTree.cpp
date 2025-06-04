@@ -2,7 +2,7 @@
 
 void ET_BuildExpressionTree( char* postfixExpression, SBTNode** node )
 {
-	int len = strlen( postfixExpression );
+	size_t len = strlen( postfixExpression );
 	char token = postfixExpression[len - 1];
 	postfixExpression[len - 1] = '\0';
 

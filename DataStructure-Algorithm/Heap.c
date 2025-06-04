@@ -227,7 +227,7 @@ void Heap_PrintNdoes( Heap* heap )
 {
 	for ( int i = 0; i < heap->UsedSize; i++ )
 	{
-		printf( "%d ", heap->Nodes[i].Data );
+		printf( "%lld ", ( long long ) ( heap->Nodes[i].Data ) );
 	}
 	printf( "\n" );
 }

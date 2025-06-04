@@ -4,7 +4,7 @@
 #include <memory.h>
 #include <stdlib.h>
 
-typedef int ElementType;
+#include "common.h"
 
 typedef struct HeapNode
 {

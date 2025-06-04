@@ -142,6 +142,7 @@
     <ClCompile Include="LinkedQueue.cpp" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Heap.c" />
+    <ClCompile Include="OpenAddressing.c" />
     <ClCompile Include="PriorityQueue.c" />
     <ClCompile Include="RedBlackTree.cpp" />
     <ClCompile Include="SBTTree.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="Chaining.h" />
     <ClInclude Include="CircularDoublyLinkedList.h" />
     <ClInclude Include="CircularQueue.h" />
+    <ClInclude Include="common.h" />
     <ClInclude Include="DisjointSet.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="ExpressionTree.h" />
@@ -167,6 +169,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListStack.h" />
     <ClInclude Include="LinkedQueue.h" />
+    <ClInclude Include="OpenAddressing.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="PriorityQueue.h" />
