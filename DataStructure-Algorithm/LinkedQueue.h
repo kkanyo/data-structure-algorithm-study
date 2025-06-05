@@ -1,100 +1,24 @@
 #pragma once
 
-#include <cstdio>
-#include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
 
-template <typename T>
-class LinkedQueue
+#include "common.h"
+
+typedef struct LinkedQueue
 {
-private:
-	struct Node
-	{
-		T Data;
-		Node* Next;
-	};
-
-	Node* Front;
-	Node* Rear;
+	LinkedNode* Front;
+	LinkedNode* Rear;
 	int Count;
+} LinkedQueue;
 
-public:
-	LinkedQueue();
+void LQ_CreateQueue( LinkedQueue** queue );
+void LQ_DestroyQueue( LinkedQueue* queue );
 
-	void Enqueue( T data );
-	T Dequeue();
+LinkedNode* LQ_CreateNode( ElementType data );
+void LQ_DestroyNode( LinkedNode* node );
 
-	int GetSize();
-	bool IsEmpty();
-};
-//
-//template<typename T>
-//LinkedQueue<T>::LinkedQueue()
-//{
-//	this->Front = nullptr;
-//	this->Rear = nullptr;
-//	this->Count = 0;
-//}
-//
-//template<typename T>
-//void LinkedQueue<T>::Enqueue( T data )
-//{
-//	Node* newNode = ( Node* ) malloc( sizeof( Node ) );
-//	if ( newNode == nullptr )
-//	{
-//		fprintf( stderr, "[line %d][%s] newNode is nullptr, ", __LINE__, __FUNCTION__ );
-//		return;
-//	}
-//
-//	newNode->Data = data;
-//	newNode->Next = nullptr;
-//
-//	if ( this->IsEmpty() )
-//	{
-//		this->Front = newNode;
-//		this->Rear = newNode;
-//	}
-//	else
-//	{
-//		this->Rear->Next = newNode;
-//		this->Rear = newNode;
-//	}
-//
-//	this->Count++;
-//}
-//
-//template<typename T>
-//T LinkedQueue<T>::Dequeue()
-//{
-//	if ( this->IsEmpty() )
-//	{
-//		fprintf( stderr, "[line %d][%s] queue is empty, ", __LINE__, __FUNCTION__ );
-//		return T();
-//	}
-//
-//	Node* current = this->Front;
-//	if ( this->Front->Next == nullptr )
-//	{
-//		this->Front = nullptr;
-//		this->Rear = nullptr;
-//	}
-//	else
-//	{
-//		this->Front = this->Front->Next;
-//	}
-//
-//	this->Count--;
-//
-//	return current->Data;
-//}
-//
-//template<typename T>
-//int LinkedQueue<T>::GetSize()
-//{
-//	return this->Count;
-//}
-//
-//template<typename T>
-//bool LinkedQueue<T>::IsEmpty()
-//{
-//	return this->Front == nullptr;
-//}
+void LQ_Enqueue( LinkedQueue* queue, LinkedNode* node );
+LinkedNode* LQ_Dequeue( LinkedQueue* queue );
+
+int LQ_IsEmpty( LinkedQueue* queue );

@@ -18,3 +18,8 @@ typedef void* ElementType;
 typedef void* KeyType;
 typedef void* ValueType;
 
+typedef struct LinkedNode
+{
+	ElementType Data;
+	struct LinkedNode* Next;
+} LinkedNode;
