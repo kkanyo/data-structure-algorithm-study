@@ -1,4 +1,4 @@
-#include "Test.h"
+	#include "Test.h"
 
 void TestHeap()
 {
@@ -209,6 +209,63 @@ void TestGraph()
 	AddEdge( v5, CreateEdge( v5, v4, 0 ) );
 
 	PrintGraph( graph );
+
+	DestroyGraph( graph );
+}
+
+void TestGraphTraversal()
+{
+	int mode = 0;
+	Graph* graph = CreateGraph();
+
+	Vertex* v1 = CreateVertex( ( void* ) 1 );
+	Vertex* v2 = CreateVertex( ( void* ) 2 );
+	Vertex* v3 = CreateVertex( ( void* ) 3 );
+	Vertex* v4 = CreateVertex( ( void* ) 4 );
+	Vertex* v5 = CreateVertex( ( void* ) 5 );
+	Vertex* v6 = CreateVertex( ( void* ) 6 );
+	Vertex* v7 = CreateVertex( ( void* ) 7 );
+
+	AddVertex( graph, v1 );
+	AddVertex( graph, v2 );
+	AddVertex( graph, v3 );
+	AddVertex( graph, v4 );
+	AddVertex( graph, v5 );
+	AddVertex( graph, v6 );
+	AddVertex( graph, v7 );
+
+	AddEdge( v1, CreateEdge( v1, v2, 0 ) );
+	AddEdge( v1, CreateEdge( v1, v3, 0 ) );
+	
+	AddEdge( v2, CreateEdge( v2, v4, 0 ) );
+	AddEdge( v2, CreateEdge( v2, v5, 0 ) );
+
+	AddEdge( v3, CreateEdge( v3, v4, 0 ) );
+	AddEdge( v3, CreateEdge( v3, v6, 0 ) );
+	
+	AddEdge( v4, CreateEdge( v4, v5, 0 ) );
+	AddEdge( v4, CreateEdge( v4, v7, 0 ) );
+
+	AddEdge( v5, CreateEdge( v5, v7, 0 ) );
+
+	AddEdge( v6, CreateEdge( v6, v7, 0 ) );
+
+	printf( "Enter Traversal Mode (0:DFS, 1:BFS) : " );
+	scanf_s( "%d", &mode );
+
+	if ( mode == 0 )
+	{
+		DFS( graph->Vertices );
+	}
+	else
+	{
+		LinkedQueue* queue = NULL;
+		LQ_CreateQueue( &queue );
+
+		BFS( graph->Vertices, queue );
+
+		LQ_DestroyQueue( queue );
+	}
 
 	DestroyGraph( graph );
 }

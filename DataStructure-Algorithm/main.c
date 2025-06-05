@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestGraph();
+	TestGraphTraversal();
 
 	return 0;
 }

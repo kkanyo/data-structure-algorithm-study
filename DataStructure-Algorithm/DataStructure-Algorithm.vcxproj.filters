@@ -81,7 +81,7 @@
     <ClCompile Include="LinkedListStack.cpp">
       <Filter>소스 파일\data_structure\stack</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedQueue.cpp">
+    <ClCompile Include="LinkedQueue.c">
       <Filter>소스 파일\data_structure\queue</Filter>
     </ClCompile>
     <ClCompile Include="SBTTree.cpp">
@@ -134,6 +134,12 @@
     </ClCompile>
     <ClCompile Include="Graph.c">
       <Filter>소스 파일\data_structure\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphTraversal.h">
+      <Filter>소스 파일\algorithm\search</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphTraversal.c">
+      <Filter>소스 파일\algorithm\search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

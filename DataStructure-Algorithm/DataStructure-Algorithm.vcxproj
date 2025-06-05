@@ -137,10 +137,12 @@
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="Graph.c" />
+    <ClCompile Include="GraphTraversal.c" />
+    <ClCompile Include="GraphTraversal.h" />
     <ClCompile Include="LCRSTree.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListStack.cpp" />
-    <ClCompile Include="LinkedQueue.cpp" />
+    <ClCompile Include="LinkedQueue.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Heap.c" />
     <ClCompile Include="OpenAddressing.c" />
