@@ -135,3 +135,35 @@ void TestChainingHashTable()
 
 	CHT_DestroyHashTable( ht );
 }
+
+void TestOpenAddressingHashTable()
+{
+	OAHashTable* ht = OAHT_CreateHashTable( 11 );
+
+	OAHT_Set( &ht, ( void* ) "MSFT", ( void* ) "Microsoft Corporation" );
+	OAHT_Set( &ht, ( void* ) "JAVA", ( void* ) "Sun Microsystems" );
+	OAHT_Set( &ht, ( void* ) "REDH", ( void* ) "Red Hat Linux" );
+	OAHT_Set( &ht, ( void* ) "APAC", ( void* ) "Apache Org" );
+	OAHT_Set( &ht, ( void* ) "ZYMZZ", ( void* ) "Unisys Ops Check" );
+	OAHT_Set( &ht, ( void* ) "IBM", ( void* ) "IBM Ltd." );
+	OAHT_Set( &ht, ( void* ) "ORCL", ( void* ) "Oracle Corporation" );
+	OAHT_Set( &ht, ( void* ) "CSCO", ( void* ) "Cisco Systems, Inc" );
+	OAHT_Set( &ht, ( void* ) "GOOG", ( void* ) "Google Inc." );
+	OAHT_Set( &ht, ( void* ) "YHOO", ( void* ) "Yahoo! inc." );
+	OAHT_Set( &ht, ( void* ) "NOVL", ( void* ) "Novell inc." );
+
+	printf( "\n" );
+	printf( "Key:%s, Value:%s\n", "MSFT", ( char* ) OAHT_Get( ht, ( void* ) "MSFT" ) );
+	printf( "Key:%s, Value:%s\n", "REDH", ( char* ) OAHT_Get( ht, ( void* ) "REDH" ) );
+	printf( "Key:%s, Value:%s\n", "APAC", ( char* ) OAHT_Get( ht, ( void* ) "APAC" ) );
+	printf( "Key:%s, Value:%s\n", "ZYMZZ", ( char* ) OAHT_Get( ht, ( void* ) "ZYMZZ" ) );
+	printf( "Key:%s, Value:%s\n", "JAVA", ( char* ) OAHT_Get( ht, ( void* ) "JAVA" ) );
+	printf( "Key:%s, Value:%s\n", "IBM", ( char* ) OAHT_Get( ht, ( void* ) "IBM" ) );
+	printf( "Key:%s, Value:%s\n", "ORCL", ( char* ) OAHT_Get( ht, ( void* ) "ORCL" ) );
+	printf( "Key:%s, Value:%s\n", "CSCO", ( char* ) OAHT_Get( ht, ( void* ) "CSCO" ) );
+	printf( "Key:%s, Value:%s\n", "GOOG", ( char* ) OAHT_Get( ht, ( void* ) "GOOG" ) );
+	printf( "Key:%s, Value:%s\n", "YHOO", ( char* ) OAHT_Get( ht, ( void* ) "YHOO" ) );
+	printf( "Key:%s, Value:%s\n", "NOVL", ( char* ) OAHT_Get( ht, ( void* ) "NOVL" ) );
+
+	OAHT_DestroyHashTable( ht );
+}
