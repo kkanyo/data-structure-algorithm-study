@@ -167,3 +167,48 @@ void TestOpenAddressingHashTable()
 
 	OAHT_DestroyHashTable( ht );
 }
+
+void TestGraph()
+{
+	Graph* graph = CreateGraph();
+	if ( graph == NULL )
+	{
+		printf( "Graph creation failed.\n" );
+		return;
+	}
+
+	Vertex* v1 = CreateVertex( ( void* ) '1' );
+	Vertex* v2 = CreateVertex( ( void* ) '2' );
+	Vertex* v3 = CreateVertex( ( void* ) '3' );
+	Vertex* v4 = CreateVertex( ( void* ) '4' );
+	Vertex* v5 = CreateVertex( ( void* ) '5' );
+
+	AddVertex( graph, v1 );
+	AddVertex( graph, v2 );
+	AddVertex( graph, v3 );
+	AddVertex( graph, v4 );
+	AddVertex( graph, v5 );
+
+	AddEdge( v1, CreateEdge( v1, v2, 0 ) );
+	AddEdge( v1, CreateEdge( v1, v3, 0 ) );
+	AddEdge( v1, CreateEdge( v1, v4, 0 ) );
+	AddEdge( v1, CreateEdge( v1, v5, 0 ) );
+
+	AddEdge( v2, CreateEdge( v2, v1, 0 ) );
+	AddEdge( v2, CreateEdge( v2, v3, 0 ) );
+	AddEdge( v2, CreateEdge( v2, v5, 0 ) );
+
+	AddEdge( v3, CreateEdge( v3, v1, 0 ) );
+	AddEdge( v3, CreateEdge( v3, v2, 0 ) );
+
+	AddEdge( v4, CreateEdge( v4, v1, 0 ) );
+	AddEdge( v4, CreateEdge( v4, v5, 0 ) );
+
+	AddEdge( v5, CreateEdge( v5, v1, 0 ) );
+	AddEdge( v5, CreateEdge( v5, v2, 0 ) );
+	AddEdge( v5, CreateEdge( v5, v4, 0 ) );
+
+	PrintGraph( graph );
+
+	DestroyGraph( graph );
+}

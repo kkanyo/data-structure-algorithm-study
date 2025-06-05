@@ -46,6 +46,9 @@
     <Filter Include="소스 파일\common">
       <UniqueIdentifier>{94890411-8855-4a5a-858a-facfbabce6d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\data_structure\graph">
+      <UniqueIdentifier>{f0da6ecb-bc63-4da3-9ffc-2474225b40e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -129,6 +132,9 @@
     <ClCompile Include="OpenAddressing.c">
       <Filter>소스 파일\data_structure\hash</Filter>
     </ClCompile>
+    <ClCompile Include="Graph.c">
+      <Filter>소스 파일\data_structure\graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -190,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="Point.h">
       <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>소스 파일\data_structure\graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

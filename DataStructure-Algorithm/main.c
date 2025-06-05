@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestOpenAddressingHashTable();
+	TestGraph();
 
 	return 0;
 }

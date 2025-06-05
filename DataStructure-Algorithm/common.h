@@ -7,6 +7,12 @@ enum ElementStatus
 	OCCUPIED = 1,
 };
 
+enum VisitMode
+{
+	VISITED,
+	NOTVISITED
+};
+
 typedef void* ElementType;
 
 typedef void* KeyType;

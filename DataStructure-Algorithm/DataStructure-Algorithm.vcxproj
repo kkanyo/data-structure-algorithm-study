@@ -136,6 +136,7 @@
     <ClCompile Include="DisjointSet.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
+    <ClCompile Include="Graph.c" />
     <ClCompile Include="LCRSTree.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListStack.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="DisjointSet.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="ExpressionTree.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="LCRSTree.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListStack.h" />
