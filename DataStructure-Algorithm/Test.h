@@ -1,3 +1,4 @@
+#include "Sort.h"
 #include "LinkedQueue.h"
 #include "Heap.h"
 #include "PriorityQueue.h"
@@ -7,6 +8,7 @@
 #include "Graph.h"
 #include "GraphTraversal.h"
 
+void TestMergeSort();
 void TestHeap();
 void TestPriorityQueue();
 void TestSimpleHashTable();

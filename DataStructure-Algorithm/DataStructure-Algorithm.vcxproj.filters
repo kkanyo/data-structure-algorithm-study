@@ -49,6 +49,9 @@
     <Filter Include="소스 파일\data_structure\graph">
       <UniqueIdentifier>{f0da6ecb-bc63-4da3-9ffc-2474225b40e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\algorithm\sort">
+      <UniqueIdentifier>{85edfeae-6d85-4e5f-a295-0013b49aa441}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -99,9 +102,6 @@
     <ClCompile Include="RedBlackTree.cpp">
       <Filter>소스 파일\algorithm\search</Filter>
     </ClCompile>
-    <ClCompile Include="Test_BinarySearchTree.cpp">
-      <Filter>소스 파일\algorithm\search</Filter>
-    </ClCompile>
     <ClCompile Include="Test.h">
       <Filter>소스 파일\test</Filter>
     </ClCompile>
@@ -140,6 +140,15 @@
     </ClCompile>
     <ClCompile Include="GraphTraversal.c">
       <Filter>소스 파일\algorithm\search</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_BinarySearchTree.cpp">
+      <Filter>소스 파일\test</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort.h">
+      <Filter>소스 파일\algorithm\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort.c">
+      <Filter>소스 파일\algorithm\sort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,21 @@
 	#include "Test.h"
 
+void TestMergeSort()
+{
+	int list[] = { 334, 6, 4, 2, 3, 1, 5, 117, 12, 34 };
+	int length = sizeof( list ) / sizeof( list[0] );
+	int i = 0;
+
+	MergeSort( list, 0, length - 1 );
+
+	for (int i = 0; i < length; i++)
+	{
+		printf( "%d ", list[i] );
+	}
+
+	printf( "\n" );
+}
+
 void TestHeap()
 {
 	Heap* heap = Heap_Create( 3 );

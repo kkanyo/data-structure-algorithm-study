@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestGraphTraversal();
+	TestMergeSort();
 
 	return 0;
 }

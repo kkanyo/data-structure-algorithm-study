@@ -145,6 +145,8 @@
     <ClCompile Include="LinkedQueue.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Heap.c" />
+    <ClCompile Include="Sort.c" />
+    <ClCompile Include="Sort.h" />
     <ClCompile Include="OpenAddressing.c" />
     <ClCompile Include="PriorityQueue.c" />
     <ClCompile Include="RedBlackTree.cpp" />
