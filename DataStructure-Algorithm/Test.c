@@ -1,5 +1,20 @@
 	#include "Test.h"
 
+void TestPower()
+{
+	int base = -29;
+	int exponent = 29;
+
+	printf( "%d^%d = %lld\n", base, exponent, Power( base, exponent ) );
+}
+
+void TestFibonacci( int n )
+{
+	unsigned long result = Fibonacci( n );
+
+	printf( "Fibonacci(%d) = %lu\n", n, result );
+}
+
 void TestMergeSort()
 {
 	int list[] = { 334, 6, 4, 2, 3, 1, 5, 117, 12, 34 };

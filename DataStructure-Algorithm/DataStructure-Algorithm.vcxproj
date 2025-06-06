@@ -145,6 +145,7 @@
     <ClCompile Include="LinkedQueue.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Heap.c" />
+    <ClCompile Include="Math.c" />
     <ClCompile Include="Sort.c" />
     <ClCompile Include="Sort.h" />
     <ClCompile Include="OpenAddressing.c" />
@@ -175,6 +176,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListStack.h" />
     <ClInclude Include="LinkedQueue.h" />
+    <ClInclude Include="Math.h" />
     <ClInclude Include="OpenAddressing.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Heap.h" />

@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestMergeSort();
+	TestFibonacci( 46 );
 
 	return 0;
 }

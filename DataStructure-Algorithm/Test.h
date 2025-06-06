@@ -1,3 +1,4 @@
+#include "Math.h"
 #include "Sort.h"
 #include "LinkedQueue.h"
 #include "Heap.h"
@@ -8,6 +9,8 @@
 #include "Graph.h"
 #include "GraphTraversal.h"
 
+void TestPower();
+void TestFibonacci( int n );
 void TestMergeSort();
 void TestHeap();
 void TestPriorityQueue();
