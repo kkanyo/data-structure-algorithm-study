@@ -52,6 +52,9 @@
     <Filter Include="소스 파일\algorithm\sort">
       <UniqueIdentifier>{85edfeae-6d85-4e5f-a295-0013b49aa441}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\algorithm\backtracking">
+      <UniqueIdentifier>{c7988493-14f5-4520-9c21-db670cf434a9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -159,6 +162,9 @@
     <ClCompile Include="common.c">
       <Filter>소스 파일\common</Filter>
     </ClCompile>
+    <ClCompile Include="MazeSolver.c">
+      <Filter>소스 파일\algorithm\backtracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -230,5 +236,16 @@
     <ClInclude Include="MyString.h">
       <Filter>소스 파일\algorithm</Filter>
     </ClInclude>
+    <ClInclude Include="MazeSolver.h">
+      <Filter>소스 파일\algorithm\backtracking</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\data\MazeSample.dat">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="..\data\MazeSample2.dat">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -9,6 +9,7 @@
 #include "Graph.h"
 #include "GraphTraversal.h"
 #include "MyString.h"
+#include "MazeSolver.h"
 
 void TestPower();
 void TestFibonacci( int n );
@@ -22,3 +23,4 @@ void TestGraph();
 void TestGraphTraversal();
 void TestLCS();
 void TestMakingChange();
+void TestMazeSolver( int argc, char* argv[] );

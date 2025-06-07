@@ -1,8 +1,8 @@
 ﻿#include "Test.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-	TestMakingChange();
+	TestMazeSolver(argc, argv);
 
 	return 0;
 }

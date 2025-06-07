@@ -405,3 +405,33 @@ void TestMakingChange()
 	free( coinUnits );
 	free( change );
 }
+
+void TestMazeSolver(int argc, char* argv[])
+{
+	MazeInfo maze = { 0, 0, NULL };
+
+	if ( argc < 2 )
+	{
+		printf( "Usage: MazeSolver <MazeFile>\n" );
+		return;
+	}
+
+	if ( GetMaze( argv[1], &maze ) == FAIL )
+	{
+		return;
+	}
+
+	if ( Solve( &maze ) == FAIL )
+	{
+		return;
+	}
+
+	for ( int i = 0; i < maze.RowSize; i++ )
+	{
+		for ( int j = 0; j < maze.ColumnSize; j++ )
+		{
+			printf( "%c", maze.Data[i][j] );
+		}
+		printf( "\n" );
+	}
+}
