@@ -10,7 +10,7 @@ void TestPower()
 
 void TestFibonacci( int n )
 {
-	unsigned long result = Fibonacci( n );
+	unsigned long result = FibonacciDP( n );
 
 	printf( "Fibonacci(%d) = %lu\n", n, result );
 }

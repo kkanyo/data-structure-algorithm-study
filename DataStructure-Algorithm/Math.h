@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct Matrix
 {
@@ -13,3 +14,5 @@ Matrix MatrixPower( Matrix matrix, int n );
 long long Power( int base, int exponent );
 
 unsigned long Fibonacci( int n );
+
+unsigned long FibonacciDP( int n );

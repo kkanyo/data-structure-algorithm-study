@@ -42,6 +42,36 @@ unsigned long Fibonacci( int n )
 	return fibonacci.Data[0][1];
 }
 
+unsigned long FibonacciDP( int n )
+{
+	if ( n == 0 || n == 1 )
+	{
+		return n;
+	}
+
+	unsigned long result = 0;
+	unsigned long* FibonacciTable = ( unsigned long* ) malloc( ( n + 1 ) * sizeof( unsigned long ) );
+	if ( FibonacciTable == NULL )
+	{
+		fprintf( stderr, "Memory allocation failed.\n" );
+		return 0; // or handle as needed
+	}
+
+	FibonacciTable[0] = 0;
+	FibonacciTable[1] = 1;
+
+	for ( int i = 2; i <= n; i++ )
+	{
+		FibonacciTable[i] = FibonacciTable[i - 1] + FibonacciTable[i - 2];
+	}
+
+	result = FibonacciTable[n];
+
+	free( FibonacciTable );
+
+	return result;
+}
+
 Matrix MatrixMultiply( Matrix a, Matrix b )
 {
 	return ( Matrix ) {
