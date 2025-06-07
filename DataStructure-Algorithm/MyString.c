@@ -1,6 +1,6 @@
 #include "MyString.h"
 
-int LCS( char* str1, char* str2, int x, int y, LCSTable* table )
+int LCS( char* str1, char* str2, size_t x, size_t y, LCSTable* table )
 {
 	if ( str1 == NULL || str2 == NULL || table == NULL )
 	{
@@ -43,7 +43,7 @@ int LCS( char* str1, char* str2, int x, int y, LCSTable* table )
     return table->Data[x][y];
 }
 
-void LCS_TraceBack( char* str1, char* str2, int x, int y, LCSTable* table, char* LCS )
+void LCS_TraceBack( char* str1, char* str2, size_t x, size_t y, LCSTable* table, char* LCS )
 {
 	if ( str1 == NULL || str2 == NULL || table == NULL )
 	{
