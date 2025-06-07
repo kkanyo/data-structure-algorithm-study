@@ -133,6 +133,7 @@
     <ClCompile Include="Chaining.c" />
     <ClCompile Include="CircularDoublyLinkedList.cpp" />
     <ClCompile Include="CircularQueue.cpp" />
+    <ClCompile Include="common.c" />
     <ClCompile Include="DisjointSet.cpp" />
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />

@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestLCS();
+	TestMakingChange();
 
 	return 0;
 }

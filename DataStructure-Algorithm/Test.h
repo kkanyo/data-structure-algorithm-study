@@ -21,3 +21,4 @@ void TestOpenAddressingHashTable();
 void TestGraph();
 void TestGraphTraversal();
 void TestLCS();
+void TestMakingChange();

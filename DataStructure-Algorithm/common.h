@@ -23,3 +23,5 @@ typedef struct LinkedNode
 	ElementType Data;
 	struct LinkedNode* Next;
 } LinkedNode;
+
+int Compare( const void* a, const void* b );

@@ -1,5 +1,45 @@
 #include "Math.h"
 
+Matrix MatrixMultiply( Matrix a, Matrix b )
+{
+	return ( Matrix ) {
+		{
+			{
+				a.Data[0][0] * b.Data[0][0] + a.Data[0][1] * b.Data[1][0],
+					a.Data[0][0] * b.Data[0][1] + a.Data[0][1] * b.Data[1][1]
+			},
+			{
+				a.Data[1][0] * b.Data[0][0] + a.Data[1][1] * b.Data[1][0],
+			  a.Data[1][0] * b.Data[0][1] + a.Data[1][1] * b.Data[1][1]
+			}
+		}
+	};
+}
+
+
+Matrix MatrixPower( Matrix matrix, int n )
+{
+	if ( n < 0 )
+	{
+		fprintf( stderr, "Negative exponent is not supported for matrix power.\n" );
+		return ( Matrix ) { { { -1, -1 }, { -1, -1 } } }; // or handle as needed
+	}
+
+	if ( n > 1 )
+	{
+		matrix = MatrixPower( matrix, n / 2 );
+		matrix = MatrixMultiply( matrix, matrix );
+
+		if ( n & 1 )
+		{
+			Matrix base = { { { 1, 1 }, { 1, 0 } } };
+			return MatrixMultiply( matrix, base );
+		}
+	}
+
+	return matrix;
+}
+
 long long Power( int base, int exponent )
 {
 	if ( exponent < 0 )
@@ -72,43 +112,36 @@ unsigned long FibonacciDP( int n )
 	return result;
 }
 
-Matrix MatrixMultiply( Matrix a, Matrix b )
+void GetChange( int price, int pay, int coinUnits[], int change[], size_t size )
 {
-	return ( Matrix ) {
-		{
-			{
-				a.Data[0][0] * b.Data[0][0] + a.Data[0][1] * b.Data[1][0],
-					a.Data[0][0] * b.Data[0][1] + a.Data[0][1] * b.Data[1][1]
-			},
-			{ 
-				a.Data[1][0] * b.Data[0][0] + a.Data[1][1] * b.Data[1][0],
-			  a.Data[1][0] * b.Data[0][1] + a.Data[1][1] * b.Data[1][1] 
-			}
-		}
-	};
+	int changeAmount = pay - price;
+
+	for ( int i = 0; i < size; i++ )
+	{
+		change[i] = CountCoins( changeAmount, coinUnits[i] );
+		changeAmount -= coinUnits[i] * change[i];
+	}
 }
 
-
-Matrix MatrixPower( Matrix matrix, int n )
+int CountCoins( int amount, int coinUnit )
 {
-	if ( n < 0 )
+	int coinCount = 0;
+	int currentAmmount = amount;
+
+	while ( currentAmmount >= coinUnit )
 	{
-		fprintf( stderr, "Negative exponent is not supported for matrix power.\n" );
-		return ( Matrix ) { { { -1, -1 }, { -1, -1 } } }; // or handle as needed
+		coinCount++;
+		currentAmmount -= coinUnit;
 	}
 
-	if ( n > 1 )
+	return coinCount;
+}
+
+void PrintChange( int coinUnits[], int change[], size_t size )
+{
+	for ( int i = 0; i < size; i++ )
 	{
-		matrix = MatrixPower( matrix, n / 2 );
-		matrix = MatrixMultiply( matrix, matrix );
-
-		if ( n & 1 )
-		{
-			Matrix base = { { { 1, 1 }, { 1, 0 } } };
-			return MatrixMultiply( matrix, base );
-		}
+		printf( "%8d¿ø: %d°³\n", coinUnits[i], change[i] );
 	}
-
-	return matrix;
 }
 

@@ -156,6 +156,9 @@
     <ClCompile Include="MyString.c">
       <Filter>소스 파일\algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="common.c">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">

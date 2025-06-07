@@ -357,3 +357,51 @@ void TestLCS()
 	printf( "\n" );
 	printf( "LCS:\"%s\" (Length: %d)\n", result, length );
 }
+
+void TestMakingChange()
+{
+	int pay = 0;
+	int price = 0;
+	int unitCount = 0;
+	int* coinUnits = NULL;
+	int* change = NULL;
+
+	printf( "동전의 가짓수를 입력하세요 :" );
+	scanf_s( "%d", &unitCount );
+
+	coinUnits = ( int* ) malloc( sizeof( int ) * unitCount );
+	if ( coinUnits == NULL )
+	{
+		fprintf( stderr, "Memory allocation failed for coin units.\n" );
+		return;
+	}
+
+	change = ( int* ) malloc( sizeof( int ) * unitCount );
+	if ( change == NULL )
+	{
+		fprintf( stderr, "Memory allocation failed for change array.\n" );
+		free( coinUnits );
+		return;
+	}
+
+	for ( int i = 0; i < unitCount; i++ )
+	{
+		printf( "[%d] 번째 동전의 단위를 입력하세요 : ", i );
+		scanf_s( "%d", &coinUnits[i] );
+	}
+
+	qsort( coinUnits, unitCount, sizeof( int ), Compare );
+
+	printf( "물건 가격을 입력하세요: " );
+	scanf_s( "%d", &price );
+
+	printf( "손님이 지불한 돈은 얼마입니까? : " );
+	scanf_s( "%d", &pay );
+
+	GetChange( price, pay, coinUnits, change, unitCount );
+
+	PrintChange( coinUnits, change, unitCount );
+
+	free( coinUnits );
+	free( change );
+}
