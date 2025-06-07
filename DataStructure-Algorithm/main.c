@@ -2,7 +2,7 @@
 
 int main(int argc, char* argv[])
 {
-	TestMazeSolver(argc, argv);
+	TestNQueens( 8 );
 
 	return 0;
 }

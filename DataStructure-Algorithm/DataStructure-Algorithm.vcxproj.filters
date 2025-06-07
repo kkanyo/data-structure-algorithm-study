@@ -165,6 +165,9 @@
     <ClCompile Include="MazeSolver.c">
       <Filter>소스 파일\algorithm\backtracking</Filter>
     </ClCompile>
+    <ClCompile Include="NQueens.c">
+      <Filter>소스 파일\algorithm\backtracking</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -237,6 +240,9 @@
       <Filter>소스 파일\algorithm</Filter>
     </ClInclude>
     <ClInclude Include="MazeSolver.h">
+      <Filter>소스 파일\algorithm\backtracking</Filter>
+    </ClInclude>
+    <ClInclude Include="NQueens.h">
       <Filter>소스 파일\algorithm\backtracking</Filter>
     </ClInclude>
   </ItemGroup>

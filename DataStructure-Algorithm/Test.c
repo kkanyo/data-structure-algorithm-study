@@ -435,3 +435,21 @@ void TestMazeSolver(int argc, char* argv[])
 		printf( "\n" );
 	}
 }
+
+void TestNQueens( int numberOfQueens )
+{
+	int solutionCount = 0;
+	int* columns = ( int* ) malloc( (numberOfQueens + 1) * sizeof( int ) );
+	if ( columns == NULL )
+	{
+		return;
+	}
+
+	for ( int i = 0; i < numberOfQueens; i++ )
+	{
+		columns[0] = i;
+		FindSolutionForQueen( columns, 0, numberOfQueens, &solutionCount );
+	}
+
+	free( columns );
+}

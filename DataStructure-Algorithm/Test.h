@@ -10,6 +10,7 @@
 #include "GraphTraversal.h"
 #include "MyString.h"
 #include "MazeSolver.h"
+#include "NQueens.h"
 
 void TestPower();
 void TestFibonacci( int n );
@@ -24,3 +25,4 @@ void TestGraphTraversal();
 void TestLCS();
 void TestMakingChange();
 void TestMazeSolver( int argc, char* argv[] );
+void TestNQueens( int numberOfQueens );

@@ -151,6 +151,7 @@
     <ClCompile Include="Heap.c" />
     <ClCompile Include="Math.c" />
     <ClCompile Include="MazeSolver.c" />
+    <ClCompile Include="NQueens.c" />
     <ClCompile Include="Sort.c" />
     <ClCompile Include="Sort.h" />
     <ClCompile Include="OpenAddressing.c" />
@@ -184,6 +185,7 @@
     <ClInclude Include="LinkedQueue.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="MazeSolver.h" />
+    <ClInclude Include="NQueens.h" />
     <ClInclude Include="OpenAddressing.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Heap.h" />
