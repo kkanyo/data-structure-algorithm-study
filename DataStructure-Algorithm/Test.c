@@ -300,3 +300,60 @@ void TestGraphTraversal()
 
 	DestroyGraph( graph );
 }
+
+void TestLCS()
+{
+	char* str1 = "GOOD MORNING.";
+	char* str2 = "GUTEN MORGEN.";
+	char* result = NULL;
+
+	size_t len1 = strlen( str1 );
+	size_t len2 = strlen( str2 );
+	int length = 0;
+
+	LCSTable table = { ( int** ) malloc( sizeof( int* ) * ( len1 + 1 ) ) };
+	if ( table.Data == NULL )
+	{
+		fprintf( stderr, "Memory allocation failed for LCSTable.\n" );
+		return;
+	}
+
+	for ( int i = 0; i < len1 + 1; i++ )
+	{
+		table.Data[i] = ( int* ) malloc( sizeof( int ) * ( len2 + 1 ) );
+		if ( table.Data[i] == NULL )
+		{
+			for ( int j = 0; j < i; j++ )
+			{
+				free( table.Data[j] );
+			}
+			free( table.Data );
+			return;
+		}
+		
+		memset( table.Data[i], 0, sizeof( int ) * ( len2 + 1 ) );
+	}
+
+	length = LCS( str1, str2, len1, len2, &table );
+
+	LCS_PrintTable( &table, str1, str2, len1, len2 );
+
+	size_t tableSize = sizeof( table.Data[len1][len2] + 1 );
+	result = ( char* ) malloc( sizeof( char ) * tableSize );
+	if ( result == NULL )
+	{
+		fprintf( stderr, "Memory allocation failed for result string.\n" );
+		for ( int i = 0; i < len1 + 1; i++ )
+		{
+			free( table.Data[i] );
+		}
+		free( table.Data );
+		return;
+	}
+	memset( result, 0, tableSize );
+
+	LCS_TraceBack( str1, str2, len1, len2, &table, result );
+
+	printf( "\n" );
+	printf( "LCS:\"%s\" (Length: %d)\n", result, length );
+}

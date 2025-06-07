@@ -153,6 +153,9 @@
     <ClCompile Include="Math.c">
       <Filter>소스 파일\algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="MyString.c">
+      <Filter>소스 파일\algorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayStack.h">
@@ -219,6 +222,9 @@
       <Filter>소스 파일\data_structure\graph</Filter>
     </ClInclude>
     <ClInclude Include="Math.h">
+      <Filter>소스 파일\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="MyString.h">
       <Filter>소스 파일\algorithm</Filter>
     </ClInclude>
   </ItemGroup>

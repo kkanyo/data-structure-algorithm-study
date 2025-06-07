@@ -8,6 +8,7 @@
 #include "OpenAddressing.h"
 #include "Graph.h"
 #include "GraphTraversal.h"
+#include "MyString.h"
 
 void TestPower();
 void TestFibonacci( int n );
@@ -19,3 +20,4 @@ void TestChainingHashTable();
 void TestOpenAddressingHashTable();
 void TestGraph();
 void TestGraphTraversal();
+void TestLCS();

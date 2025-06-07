@@ -2,7 +2,7 @@
 
 int main()
 {
-	TestFibonacci( 46 );
+	TestLCS();
 
 	return 0;
 }
